@@ -626,6 +626,12 @@ a:hover {
     min-height: 0;
 }
 
+.committee-layout-head {
+    font-size: 1.3em;
+    /*border-bottom: 1px solid rgba(0, 0, 0, 0.7);*/
+    text-decoration: underline;
+}
+
 .committee-layout {
     list-style: none;
     column-gap: 30px;
