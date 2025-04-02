@@ -18,7 +18,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" >    <link href="assets/css/main.css?v=1743115970" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" >    <link href="assets/css/main.css?v=1743621604" rel="stylesheet">
     <link href="assets/css/main-ltr.css?v=1740917542" rel="stylesheet">
 
     <!-- Google tag (gtag.js) -->
@@ -196,7 +196,7 @@
         </div>
         <div class="swiper-text">
             <h2 class="conference-title">International Conference On Artificial Intelligence, Embedded Systems and Renewable Energy</h2>
-            <span class="conference-date">December 15 - 17, 2025</span>
+            <span class="conference-date countdown-container">December 15 - 17, 2025<span class="countdown-popup" id="countdown"></span></span>
             <span class="conference-location">Tizi-Ouzou, Algeria</span>
             <span class="conference-link">
                                     <a href="assets/pdf/CallForPapers.pdf" class="btn">Call for Papers <i
@@ -273,6 +273,35 @@
             disableOnInteraction: false,
         },
     });
+</script>
+
+<script>
+    function updateCountdown() {
+        const targetDate = new Date("December 15, 2025 00:00:00").getTime();
+        const now = new Date().getTime();
+        const timeDifference = targetDate - now;
+        const countdownElement = document.getElementById("countdown");
+
+        if (timeDifference <= 0) {
+            countdownElement.style.display = "none";
+            return;
+        }
+
+        const daysRemaining = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+        const monthsRemaining = Math.floor(daysRemaining / 30);
+        const remainingDays = daysRemaining % 30;
+
+        if (daysRemaining < 1) {
+            countdownElement.style.display = "none";
+        } else if (monthsRemaining >= 1) {
+            countdownElement.textContent = `${monthsRemaining} month${monthsRemaining > 1 ? 's' : ''} and ${remainingDays} day${remainingDays !== 1 ? 's' : ''} remaining`;
+        } else {
+            countdownElement.textContent = `${daysRemaining} day${daysRemaining !== 1 ? 's' : ''} remaining`;
+        }
+    }
+
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
