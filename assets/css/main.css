@@ -398,9 +398,18 @@ body {
 .swiper-text .conference-location {
     display: block;
     font-size: 1.1em;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     text-shadow: #000000dd 0 0 5px !important;
 }
+
+.swiper-text .conference-note {
+    display: block;
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    text-shadow: #000000dd 0 0 5px !important;
+}
+
+
 
 .swiper-text .conference-link {
     margin-top: 20px;
