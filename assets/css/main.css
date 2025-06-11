@@ -434,6 +434,37 @@ body {
     border: 2px solid #fff;
 }
 
+.conference-journals {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-top: 1rem;
+}
+
+.conference-journals .journals-desc {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.conference-journals .journals-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.conference-journals .journal a {
+    text-decoration: underline;
+}
+
+.conference-journals .journal a:hover {
+    text-decoration: none;
+    opacity: 0.85;
+}
+
+.conference-journals .card {
+    background-color: #fffe;
+}
+
+
 @media only screen and (max-width: 600px) {
     .swiper-text {
         font-size: 0.9em;
