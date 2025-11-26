@@ -608,12 +608,12 @@ body {
 
     .swiper-logo-left {
         left: 10px;
-        left: calc(50% - 280px);
+        left: calc(50% - 315px);
     }
 
     .swiper-logo-right {
         left: 10px;
-        left: calc(50% + 170px);
+        left: calc(50% + 205px);
     }
 }
 
@@ -628,12 +628,12 @@ body {
 
     .swiper-logo-left {
         left: 10px;
-        left: calc(50% - 175px);
+        left: calc(50% - 245px);
     }
 
     .swiper-logo-right {
         left: 10px;
-        left: calc(50% + 135px);
+        left: calc(50% + 205px);
     }
 }
 
